@@ -10,7 +10,7 @@ void ofxPBR::setup(function<void()> scene, ofCamera* camera, int depthMapResolut
 
 	sphereMesh = ofSpherePrimitive(1, 100).getMesh();
 	for (int i = 0; i<sphereMesh.getNormals().size(); i++) {
-		sphereMesh.setNormal(i, ofVec3f(1.0, 1.0, -1.0) * sphereMesh.getVertex(i).normalize());
+        sphereMesh.setNormal(i, ofVec3f(1.0, 1.0, -1.0) * glm::normalize(sphereMesh.getVertex(i)));
 	}
 
 	spotShadow.setup(4, depthMapResolution);
@@ -135,7 +135,7 @@ void ofxPBR::drawEnvironment(){
 		float scale = (camera->getFarClip() - camera->getNearClip()) / 2;
 		ofDisableDepthTest();
 		ofPushMatrix();
-		ofTranslate(ofGetCurrentViewMatrix().getInverse().getTranslation());
+        ofTranslate(toOf(ofGetCurrentViewMatrix()).getInverse().getTranslation());
 		cubeMap->bind(1);
 		envShader->begin();
 		envShader->setUniform1f("envLevel", cubeMap->getEnvLevel());
