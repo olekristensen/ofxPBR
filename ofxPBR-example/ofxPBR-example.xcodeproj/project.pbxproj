@@ -9,6 +9,28 @@
 		<string>46</string>
 		<key>objects</key>
 		<dict>
+			<key>F66DB2F484643DB141FD86FA</key>
+			<dict>
+				<key>fileRef</key>
+				<string>15E605E367B23C3668C03C45</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>15E605E367B23C3668C03C45</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxPBROmniShadow.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxPBR/src/ofxPBROmniShadow.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
 			<key>815F42D6B579CE9EFB87C085</key>
 			<dict>
 				<key>fileRef</key>
@@ -61,6 +83,21 @@
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
+			<key>D1A2F01FE8A7DA946862E2CF</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxPBRSpotShadow.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxPBR/src/ofxPBRSpotShadow.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
 			<key>5DD910CAF12518A7921DF223</key>
 			<dict>
 				<key>explicitFileType</key>
@@ -91,27 +128,11 @@
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
-			<key>181726E3B538AC828CDC433B</key>
-			<dict>
-				<key>explicitFileType</key>
-				<string>sourcecode.c.h</string>
-				<key>fileEncoding</key>
-				<string>4</string>
-				<key>isa</key>
-				<string>PBXFileReference</string>
-				<key>name</key>
-				<string>blur.h</string>
-				<key>path</key>
-				<string>../../../addons/ofxPBR/src/shaders/blur.h</string>
-				<key>sourceTree</key>
-				<string>SOURCE_ROOT</string>
-			</dict>
 			<key>13FCF680EF6D86324C4A2EC9</key>
 			<dict>
 				<key>children</key>
 				<array>
 					<string>AD9230031092B611D01A632A</string>
-					<string>181726E3B538AC828CDC433B</string>
 					<string>51E31FB725D29221C7C8A823</string>
 					<string>5DD910CAF12518A7921DF223</string>
 				</array>
@@ -248,11 +269,73 @@
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
+			<key>A30D68A1CE9DCAF26F8583BC</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxPBROmniShadow.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxPBR/src/ofxPBROmniShadow.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>8AFE53EE9F2D9E61CC02AD81</key>
+			<dict>
+				<key>fileRef</key>
+				<string>3BF4998CFA697ED4846632F5</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>3BF4998CFA697ED4846632F5</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxPBRShadow.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxPBR/src/ofxPBRShadow.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>1D20245B6DE67609522FE33B</key>
+			<dict>
+				<key>fileRef</key>
+				<string>920B5B9FC02FD66E5746B916</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>920B5B9FC02FD66E5746B916</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxPBRDirectionalShadow.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxPBR/src/ofxPBRDirectionalShadow.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
 			<key>696F881D1314FAA818DD0C0E</key>
 			<dict>
 				<key>children</key>
 				<array>
+					<string>C7F09232CE7E97AB4BE03E97</string>
+					<string>920B5B9FC02FD66E5746B916</string>
 					<string>3BF4998CFA697ED4846632F5</string>
+					<string>A30D68A1CE9DCAF26F8583BC</string>
 					<string>C7044D369D76DA73ED74A536</string>
 					<string>28AE3A48FACA03F4C41D57A2</string>
 					<string>262BC2FB79F81289725C46A0</string>
@@ -260,9 +343,11 @@
 					<string>21B9B65ED0F38DEE18B3C644</string>
 					<string>6F52B4C5E393921BF7613B54</string>
 					<string>13FCF680EF6D86324C4A2EC9</string>
+					<string>D1A2F01FE8A7DA946862E2CF</string>
 					<string>E3FE69ABF25C363D20CC7B36</string>
 					<string>739A34E9D9E34E0064EC820F</string>
 					<string>49EDBEBC749DE11469A47851</string>
+					<string>15E605E367B23C3668C03C45</string>
 				</array>
 				<key>isa</key>
 				<string>PBXGroup</string>
@@ -284,25 +369,18 @@
 				<key>sourceTree</key>
 				<string>&lt;group&gt;</string>
 			</dict>
-			<key>8AFE53EE9F2D9E61CC02AD81</key>
-			<dict>
-				<key>fileRef</key>
-				<string>3BF4998CFA697ED4846632F5</string>
-				<key>isa</key>
-				<string>PBXBuildFile</string>
-			</dict>
-			<key>3BF4998CFA697ED4846632F5</key>
+			<key>C7F09232CE7E97AB4BE03E97</key>
 			<dict>
 				<key>explicitFileType</key>
-				<string>sourcecode.cpp.cpp</string>
+				<string>sourcecode.c.h</string>
 				<key>fileEncoding</key>
 				<string>4</string>
 				<key>isa</key>
 				<string>PBXFileReference</string>
 				<key>name</key>
-				<string>ofxPBRShadow.cpp</string>
+				<string>ofxPBRDirectionalShadow.h</string>
 				<key>path</key>
-				<string>../../../addons/ofxPBR/src/ofxPBRShadow.cpp</string>
+				<string>../../../addons/ofxPBR/src/ofxPBRDirectionalShadow.h</string>
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
@@ -1262,11 +1340,13 @@ fi
 					<string>483908258D00B98B4BE69F07</string>
 					<string>F285EB3169F1566CA3D93C20</string>
 					<string>837220E80EB56CD44AD27F2A</string>
+					<string>1D20245B6DE67609522FE33B</string>
 					<string>8AFE53EE9F2D9E61CC02AD81</string>
 					<string>F8831EB0D009EE61CC9B2ABB</string>
 					<string>DCF344B29E26D3285C9727B3</string>
 					<string>24F539A6EBB964EBC5433C98</string>
 					<string>815F42D6B579CE9EFB87C085</string>
+					<string>F66DB2F484643DB141FD86FA</string>
 				</array>
 				<key>isa</key>
 				<string>PBXSourcesBuildPhase</string>
