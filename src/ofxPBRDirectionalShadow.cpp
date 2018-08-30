@@ -8,7 +8,7 @@ void ofxPBRDirectionalShadow::setup(int maxShadow, int resolution)
 void ofxPBRDirectionalShadow::calcCorners(ofCamera * cam)
 {
 	if (usingCameraFrustom) {
-		cameraInverseViewMmatrix = toOf(cam->getModelViewMatrix()).getInverse();
+		cameraInverseViewMmatrix = cam->getModelViewMatrix().getInverse();
 		float nearClip = cam->getNearClip();
 		float farClip = cam->getFarClip();
 
