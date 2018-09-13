@@ -52,7 +52,9 @@ public:
 	// light
 	void addLight(ofxPBRLight* light);
 	void removeLight(int index);
-    
+
+    void setMainCamera(ofCamera* camera);
+
 	// getter
 	RenderMode getRenderMode() { return renderMode; }
 	bool isCubeMapEnabled() { return enableCubemap; }
@@ -84,6 +86,7 @@ private:
 	bool enableCubemap = false;
 
 	ofCamera * camera;
+    ofCamera * mainCamera;
 
 	RenderMode renderMode;
 

@@ -32,13 +32,15 @@ public:
 		// depth camera's view projection matrix
 		uniform mat4 lightsViewProjectionMatrix;
 
+        uniform vec4 mv_camForLights;
+                                   
 		// in
 		in vec4 position;
 		in vec3 normal;
 		in vec2 texcoord;
 		in vec4 color;
 
-		// out
+        // out
 		out vec4 m_positionVarying;
 		out vec3 normalVarying;
 		out vec2 texCoordVarying;
@@ -46,13 +48,13 @@ public:
 
 		out vec3 mv_normalVarying;
 		out vec4 mv_positionVarying;
-
+                                   
 		void SendPBRVaryings() {
 			if (renderMode == MODE_PBR) {
 				// render pass
 				m_positionVarying = inverse(viewMatrix) * modelViewMatrix * position;
 				mat4 normalMatrix = inverse(transpose(modelViewMatrix));
-				mv_positionVarying = modelViewMatrix * position;
+				mv_positionVarying = (modelViewMatrix * position) - vec4(mv_camForLights.xyz, 0);
 				mv_normalVarying = vec3(mat3(normalMatrix) * normal);
 				texCoordVarying = texcoord;
 				colorVarying = color;
@@ -179,7 +181,7 @@ public:
 		uniform int enableDetailNormalMap;
 		uniform sampler2D detailNormalMap;
 		uniform int enableGlobalColor;
-
+                                
 		vec3 mv_normal;
 		float gamma = 1.0;
 		vec4 v_spotShadowCoord[MAX_LIGHTS];

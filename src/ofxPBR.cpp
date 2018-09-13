@@ -112,6 +112,12 @@ void ofxPBR::setCameraForDirectionalShadowBBox(ofCamera* camera)
 	this->camera = camera;
 }
 
+void ofxPBR::setMainCamera(ofCamera* camera)
+{
+    this->mainCamera = camera;
+}
+
+
 // cubemap
 void ofxPBR::setCubeMap(ofxPBRCubeMap* cubeMap)
 {
@@ -296,16 +302,20 @@ void ofxPBR::removeLight(int index) {
 // pbr
 void ofxPBR::beginPBR(){
 
+    ofCamera * camForLights = (mainCamera!=nullptr?mainCamera:camera);
+    
 	glm::mat4 modelViewMatrix = ofGetCurrentMatrix(ofMatrixMode::OF_MATRIX_MODELVIEW);
-	
+    glm::vec4 mv_camForLights = modelViewMatrix * glm::vec4(camForLights->getGlobalPosition(), 1.0);
+        
 	// pbr
     PBRShader->begin();
 
 	// common uniforms
 	PBRShader->setUniform1i("renderMode", renderMode);
 	PBRShader->setUniformMatrix4f("viewTranspose", glm::transpose(modelViewMatrix));
-	PBRShader->setUniformMatrix4f("viewMatrix", modelViewMatrix);
-
+    PBRShader->setUniformMatrix4f("viewMatrix", modelViewMatrix);
+    PBRShader->setUniform4f("mv_camForLights", mv_camForLights);
+    
     // cubemap uniforms
     if (enableCubemap && cubeMap != nullptr && cubeMap->isAllocated()) {
         // enable cubemap
